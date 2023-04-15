@@ -29,4 +29,8 @@ Buradan sonra işimiz çok kolay. Yukarıdaki gibi kendi kullanıcınızı oluş
 
 ### ☎️ İletişim
 ---
-[My Github Page](https://github.com/DCanKayrak)
+
+<div style="color: red; text-align: center;">
+  [My Github Page](https://github.com/DCanKayrak)
+  [LinkedIn](https://www.linkedin.com/in/danyal-can-kayrak/)
+</div>
