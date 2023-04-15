@@ -32,5 +32,5 @@ Buradan sonra işimiz çok kolay. Yukarıdaki gibi kendi kullanıcınızı oluş
 [Projenin Linki](https://github.com/DCanKayrak/Resume-Website)
 
 [Github Hesabım](https://github.com/DCanKayrak)
-[LinkedIn Hesabım](https://www.linkedin.com/in/danyal-can-kayrak/)Facebook: Facebook Hesabım
+[LinkedIn Hesabım](https://www.linkedin.com/in/danyal-can-kayrak/)
 [Mail Adresim] dancankan@gmail.com
