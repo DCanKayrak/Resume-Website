@@ -1,5 +1,4 @@
 # Özgeçmiş Sitesi Projesi
----
 🎉 Artık her yazılım geliştirici / yazılım mühendisinin kendi özgeçmiş sitesi olacak.
 
 🎯 Bu projemizin amacı ben de başta olmak üzere her geliştiricinin hayali bir özgeçmiş sitesidir sanırım :) Bunun için son günlerde çalıştığım dillerden olan Python programlama dili ile Django frameworkünün de gücünü kullanarak bu website projesini hayata geçirdim. Ve bunları yaparken kendime çokca şey katarken çok de eğlendim :)
