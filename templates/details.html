@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title%}
+  Details
+{% endblock %}
+
+{% block content%}
+   <main class="ds-main-section">
+     <div class="container">
+        <div class="ds-work-details-section">
+            <div class="text-center">
+              <a href="/" class="ds-button ds-arrow-button"><i class="ri-arrow-left-s-line"></i> BAck</a>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                  <header class="ds-work-det-hed">
+                      <h1 class="ds-work-det-title">{{ project.title }}</h1>
+                      <span class="ds-work-det-dep">{{ project.field }}</span>
+                  </header>
+                  <figure><img src="{{project.image}}"></figure>
+                  <div class="ds-work-content-sec">
+                      <div class="row justify-content-center">
+                          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                            {% for desc in project.description.values %}
+                              <p>{{ desc }}</p>
+                            {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+     </div>
+   </main>
+
+{% endblock%}

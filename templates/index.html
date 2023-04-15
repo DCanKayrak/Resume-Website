@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+{% load static%}
+
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+    <!-- banner -->
+    <div class="ds-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+            <figure>
+              <img src="{{ header.profile_photo }}">
+            </figure>
+          </div>
+          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+            <section>
+                <h1>
+                  <span>HI THERE</span>
+                  I’m {{ header.name }}
+                  <div>{{header.job_title}}</div>
+                </h1>
+                <ul class="ds-numbervalulist">
+                  <li>
+                    <strong>{{ header.experience }}</strong>
+                    <span>Experience</span>
+                  </li>
+                  <li>
+                    <strong>{{ header.projects }}</strong>
+                    <span>Projects</span>
+                  </li>
+                  <li>
+                    <strong>{{ header.happyClients }}</strong>
+                    <span>Happy Clients</span>
+                  </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner -->
+
+    <!-- about -->
+    <div class="ds-about-section">
+      <div class="container">
+        <section>
+            <h2 class="ds-heading">About Me</h2>
+            <p>{{ header.description }}</p>
+            <div class="ds-button-sec text-center">
+                <a href="{% static 'cv.pdf' %}" class="ds-button">Download Resume</a>
+            </div>
+        </section>
+      </div>
+    </div>
+    <!-- about -->
+
+    <!--  Skills -->
+    <div class="ds-skills-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+             <h2 class="ds-heading">Core Skills</h2>
+             <ul class="ds-skills-list">
+
+              {% for skill in skills %}
+               <li>{{ skill.title }}</li>
+              {% endfor %}
+
+             </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <h2 class="ds-heading">Other Skills</h2>
+            <ul class="ds-skills-list">
+              {% for skill in otherSkills %}
+               <li>{{ skill.skill }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Skills -->
+
+   <!-- Experience -->
+   <div class="ds-experience-section">
+     <div class="container">
+        <h2 class="ds-heading">Work Experience</h2>
+        <div class="row ds-experience-list">
+          {% for experience in workExperiences %}
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+              <section>
+                <span class="ds-year">{{ experience.date }}</span>
+                <h3 class="ds-officename">{{ experience.companyName }}</h3>
+                <span class="ds-department">{{ experience.position }}</span>
+                <p>{{ experience.description }}</p>
+                <ul>
+                  {% for exp in experience.experience.values %}
+                    <li>{{exp}}</li>
+                  {% endfor %}
+                </ul>
+              </section>
+            </div>
+
+          {% endfor %}
+        </div>
+     </div>
+   </div>
+    <!-- Experience -->
+
+   <!--  Project -->
+   <div class="ds-work-section">
+     <div class="container">
+          <h2 class="ds-heading">Latest works</h2>
+          <div class="ds-work-list-section">
+
+            {% for project in projects %}
+            <div class="ds-work-list">
+              <div class="row">
+                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                      <section>
+                          <h3 class="ds-work-tilte">{{ project.title }}</h3>
+                          <div style="color: gray;">{{project.field}}</div>
+
+                          <a href="{{ project.id }}" class="ds-button">Details</a>
+                      </section>
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                      <figure><img src="{{ project.image }}"></figure>
+                  </div>
+              </div>
+            </div>
+            {% endfor %}
+            
+          </div>
+     </div>
+   </div>
+   <!--  Project -->
+
+   <!-- Education -->
+   <div class="ds-experience-section">
+    <div class="container">
+       <h2 class="ds-heading">Education</h2>
+       <div class="row ds-experience-list">
+         {% for education in educations %}
+
+           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+             <section>
+              <span class="ds-year">{{ education.date }}</span>
+               <h3 class="ds-officename">{{ education.title }}</h3>
+               <div style="color: gray; font-size:10px;" class="ds-company">{{ education.organization }}</div>
+             </section>
+           </div>
+
+         {% endfor %}
+       </div>
+    </div>
+  </div>
+   <!-- Education -->
+
+      <!-- Certificates -->
+      <div class="ds-experience-section">
+        <div class="container">
+           <h2 class="ds-heading">Certificates</h2>
+           <div class="row ds-experience-list">
+             {% for certificate in certificates %}
+   
+               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                 <section>
+                   <h3 class="ds-officename">{{ certificate.title }}</h3>
+                   <div style="color: gray; font-size:10px;" class="ds-company">{{ certificate.company }}</div>
+                   <span class="ds-department">{{ experience.position }}</span>
+                   <p>{{ experience.description }}</p>
+                   <ul>
+                     {% for exp in experience.experience.values %}
+                       <li>{{exp}}</li>
+                     {% endfor %}
+                   </ul>
+                 </section>
+               </div>
+   
+             {% endfor %}
+           </div>
+        </div>
+      </div>
+       <!-- Certificates -->
+    
+{% endblock %}
