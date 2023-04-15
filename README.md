@@ -33,4 +33,4 @@ Buradan sonra işimiz çok kolay. Yukarıdaki gibi kendi kullanıcınızı oluş
 
 [Github Hesabım](https://github.com/DCanKayrak)
 [LinkedIn Hesabım](https://www.linkedin.com/in/danyal-can-kayrak/)
-[Mail Adresim] dancankan@gmail.com
+[Mail Adresim](dancankan@gmail.com)
